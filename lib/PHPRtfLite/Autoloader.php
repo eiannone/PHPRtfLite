@@ -57,21 +57,23 @@ class PHPRtfLite_Autoloader
     {
         // validate classname
         if (!preg_match('/^[a-zA-Z_][a-zA-Z0-9_]*$/m', $className)) {
-            throw new Exception("Class name '$className' is invalid");
+            return;
+//            throw new Exception("Class name '$className' is invalid");
         }
 
         $classFile = self::$_baseDir . '/' . str_replace('_', '/', $className) . '.php';
 
         // check if file exists
         if (!file_exists($classFile)) {
-            throw new Exception("File $classFile does not exist!");
+            return;
+//            throw new Exception("File $classFile does not exist!");
         }
 
         require $classFile;
 
-        if (!class_exists($className) && !interface_exists($className)) {
-            throw new Exception("Class $className could not be found!");
-        }
+//        if (!class_exists($className) && !interface_exists($className)) {
+//            throw new Exception("Class $className could not be found!");
+//        }
     }
 
 }
