@@ -671,7 +671,7 @@ class PHPRtfLite_Table_Cell extends PHPRtfLite_Container
     /**
      * renders rtf code for cell
      */
-    public function render()
+    public function render(): void
     {
         $stream = $this->_rtf->getWriter();
         $stream->write("\r\n");

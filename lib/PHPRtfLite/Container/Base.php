@@ -310,7 +310,7 @@ abstract class PHPRtfLite_Container_Base implements PHPRtfLite_Freeable
      *
      * @return string rtf code
      */
-    public function render(): string
+    public function render(): void
     {
         $stream = $this->_rtf->getWriter();
 

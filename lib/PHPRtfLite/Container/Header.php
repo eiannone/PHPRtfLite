@@ -149,7 +149,7 @@ class PHPRtfLite_Container_Header extends PHPRtfLite_Container_Base
      * streams rtf code for header/footer
      * @return string rtf code
      */
-    public function render()
+    public function render(): void
     {
         $stream = $this->_rtf->getWriter();
 

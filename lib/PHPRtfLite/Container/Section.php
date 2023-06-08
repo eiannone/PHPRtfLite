@@ -680,7 +680,7 @@ class PHPRtfLite_Container_Section extends PHPRtfLite_Container
     /**
      * renders rtf code of section
      */
-    public function render()
+    public function render(): void
     {
         $writer = $this->_rtf->getWriter();
 
