@@ -31,6 +31,10 @@ class PHPRtfLite_Element
 {
 
     /**
+     * @var PHPRtfLite
+     */
+    protected $_rtf;
+    /**
      * @var string
      */
     protected $_text                = '';
